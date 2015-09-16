@@ -1,5 +1,7 @@
 *.pyc
 config.py
+instaconfig.py
+Instaconfig.py
 *.log
 *.sql
 *.html

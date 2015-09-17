@@ -62,4 +62,21 @@ def cities_output():
 @app.route('/cover')
 def cover_page():
     # Displays cover page
-    return render_template('cover.html')
+    
+    return render_template('cover.html', 
+                           title = 'busker.ly', 
+                           cover_heading = 'busker.ly', 
+                           lead = 'Find streetmusicians near you', 
+                           masthead_brand = 'busker.ly')
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,6 +3,10 @@ from app import app
 import pymysql as mdb
 from a_Model import ModelIt
 
+from geopy.geocoders import Nominatim
+
+geolocator = Nominatim()
+
 db = mdb.connect(user="root", host="localhost", db="world", charset='utf8')
 
 @app.route('/')
@@ -59,9 +63,16 @@ def cities_output():
     the_result = ModelIt(city, pop_input)
     return render_template("output.html", cities = cities, the_result = the_result)
 
-@app.route('/cover')
+@app.route('/cover', methods = ['GET'])
 def cover_page():
     # Displays cover page
+    
+    location = request.args.get('location')
+    distance = request.args.get('distance')
+    
+    geolocation = geolocator.geocode(location)
+    
+    print geolocation.latitude, geolocation.longitude, 
     
     return render_template('cover.html', 
                            title = 'busker.ly', 
@@ -69,7 +80,18 @@ def cover_page():
                            lead = 'Find streetmusicians near you', 
                            masthead_brand = 'busker.ly')
 
-
+@app.route('/map', methods = ['GET'])
+def map_page():
+    # Display map page
+    location = request.args.get('location')
+    distance = request.args.get('distance')
+    geolocation = geolocator.geocode(location)
+    
+    return render_template('map.html',
+                           title = 'busker.ly',
+                           cover_heading = ' busker.ly',
+                           lead = 'Latitude: %s, Longitude: %s' % (geolocation.latitude, geolocation.longitude),
+                           masthead_brand = 'busker.ly')
 
 
 

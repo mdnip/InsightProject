@@ -50,16 +50,16 @@
 
 <body>
 
-   <div class="folium-map" id="folium_901e7f89c0d24696829b6ca76f2c7549" style="width: 100%; height: 100%"></div>
+   <div class="folium-map" id="folium_213aed38595b4f0eaf658c22c53539ae" style="width: 100%; height: 100%"></div>
 
    <script>
 
       
 
-      var base_tile = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      var base_tile = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg', {
           maxZoom: 18,
           minZoom: 1,
-          attribution: 'Map data (c) <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+          attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
       });
 
       var baseLayer = {
@@ -94,8 +94,8 @@
       /*
       Creates the map and adds the selected layers
       */
-      var map = L.map('folium_901e7f89c0d24696829b6ca76f2c7549', {
-                                       center:[45.5236, -122.675],
+      var map = L.map('folium_213aed38595b4f0eaf658c22c53539ae', {
+                                       center:[37.7792768, -122.4192704],
                                        zoom: 10,
                                        maxBounds: bounds,
                                        layers: [base_tile]
@@ -112,6 +112,564 @@
 
       
 
+      
+      var circle_1 = L.circle([37.769817189, -122.448555984], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_1.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/sh0.08/e35/11350924_1168169466532055_1111188917_n.jpg width=200 height=200><br>");
+      circle_1._popup.options.maxWidth = 300;
+      map.addLayer(circle_1)
+      
+      var circle_2 = L.circle([37.769817189, -122.448555984], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_2.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/sh0.08/e35/11350924_1168169466532055_1111188917_n.jpg width=200 height=200><br>");
+      circle_2._popup.options.maxWidth = 300;
+      map.addLayer(circle_2)
+      
+      var circle_3 = L.circle([37.808779732, -122.410891758], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_3.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xfp1/t51.2885-15/e15/1922118_810249095758720_1433622995_n.jpg width=200 height=200><br>");
+      circle_3._popup.options.maxWidth = 300;
+      map.addLayer(circle_3)
+      
+      var circle_4 = L.circle([37.770131982, -122.460993924], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_4.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/s640x640/sh0.08/e35/11934794_1470110839959895_1014548471_n.jpg width=200 height=200><br>");
+      circle_4._popup.options.maxWidth = 300;
+      map.addLayer(circle_4)
+      
+      var circle_5 = L.circle([37.770025958, -122.446997072], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_5.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e35/11351682_1101479543214376_913616341_n.jpg width=200 height=200><br>");
+      circle_5._popup.options.maxWidth = 300;
+      map.addLayer(circle_5)
+      
+      var circle_6 = L.circle([37.763009307, -122.420884375], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_6.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/sh0.08/e35/11875417_932180490195358_296936282_n.jpg width=200 height=200><br>");
+      circle_6._popup.options.maxWidth = 300;
+      map.addLayer(circle_6)
+      
+      var circle_7 = L.circle([37.769722222, -122.476944444], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_7.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/sh0.08/e35/11246884_504405183047882_209158056_n.jpg width=200 height=200><br>");
+      circle_7._popup.options.maxWidth = 300;
+      map.addLayer(circle_7)
+      
+      var circle_8 = L.circle([37.787028892, -122.407553267], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_8.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/e15/11348264_536578016497441_442686032_n.jpg width=200 height=200><br>");
+      circle_8._popup.options.maxWidth = 300;
+      map.addLayer(circle_8)
+      
+      var circle_9 = L.circle([37.769817189, -122.448555984], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_9.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/s640x640/sh0.08/e35/11261333_1762492570644625_1116785239_n.jpg width=200 height=200><br>");
+      circle_9._popup.options.maxWidth = 300;
+      map.addLayer(circle_9)
+      
+      var circle_10 = L.circle([37.787028892, -122.407553267], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_10.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/e15/11849462_1619116475017656_172697971_n.jpg width=200 height=200><br>");
+      circle_10._popup.options.maxWidth = 300;
+      map.addLayer(circle_10)
+      
+      var circle_11 = L.circle([37.808373331, -122.414553446], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_11.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11335827_425034991030437_1569853013_n.jpg width=200 height=200><br>");
+      circle_11._popup.options.maxWidth = 300;
+      map.addLayer(circle_11)
+      
+      var circle_12 = L.circle([37.8000183, -122.4347305], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_12.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11373831_1646688315575553_1582897073_n.jpg width=200 height=200><br>");
+      circle_12._popup.options.maxWidth = 300;
+      map.addLayer(circle_12)
+      
+      var circle_13 = L.circle([37.808320835, -122.41512971], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_13.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e35/11251293_1478489102467687_452735528_n.jpg width=200 height=200><br>");
+      circle_13._popup.options.maxWidth = 300;
+      map.addLayer(circle_13)
+      
+      var circle_14 = L.circle([37.775, -122.418], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_14.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/e35/11325653_1675267769371523_2011611462_n.jpg width=200 height=200><br>");
+      circle_14._popup.options.maxWidth = 300;
+      map.addLayer(circle_14)
+      
+      var circle_15 = L.circle([37.775, -122.418], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_15.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/sh0.08/e35/11358993_864242650358146_245810127_n.jpg width=200 height=200><br>");
+      circle_15._popup.options.maxWidth = 300;
+      map.addLayer(circle_15)
+      
+      var circle_16 = L.circle([37.793055556, -122.397222222], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_16.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/sh0.08/e35/11925865_533873953431110_93645316_n.jpg width=200 height=200><br>");
+      circle_16._popup.options.maxWidth = 300;
+      map.addLayer(circle_16)
+      
+      var circle_17 = L.circle([37.797365, -122.40587], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_17.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/s640x640/sh0.08/e35/11934653_1622374994679543_1189514752_n.jpg width=200 height=200><br>");
+      circle_17._popup.options.maxWidth = 300;
+      map.addLayer(circle_17)
+      
+      var circle_18 = L.circle([37.792113821, -122.39177], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_18.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/s640x640/sh0.08/e35/11875388_443511722500238_2028450512_n.jpg width=200 height=200><br>");
+      circle_18._popup.options.maxWidth = 300;
+      map.addLayer(circle_18)
+      
+      var circle_19 = L.circle([37.80827944, -122.414539678], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_19.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/s640x640/sh0.08/e35/11934659_407021806171474_844455136_n.jpg width=200 height=200><br>");
+      circle_19._popup.options.maxWidth = 300;
+      map.addLayer(circle_19)
+      
+      var circle_20 = L.circle([37.7990494, -122.4081497], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_20.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11887102_137512616594669_1105566928_n.jpg width=200 height=200><br>");
+      circle_20._popup.options.maxWidth = 300;
+      map.addLayer(circle_20)
+      
+      var circle_21 = L.circle([37.775, -122.418], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_21.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/s640x640/sh0.08/e35/11809859_915344465212884_796433960_n.jpg width=200 height=200><br>");
+      circle_21._popup.options.maxWidth = 300;
+      map.addLayer(circle_21)
+      
+      var circle_22 = L.circle([37.7516098, -122.4310913], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_22.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11373856_1619699778302540_2122383902_n.jpg width=200 height=200><br>");
+      circle_22._popup.options.maxWidth = 300;
+      map.addLayer(circle_22)
+      
+      var circle_23 = L.circle([37.776193528, -122.402815533], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_23.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/s640x640/sh0.08/e35/11375360_739728172802848_1087423428_n.jpg width=200 height=200><br>");
+      circle_23._popup.options.maxWidth = 300;
+      map.addLayer(circle_23)
+      
+      var circle_24 = L.circle([37.787028892, -122.407553267], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_24.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11373594_744307665681156_152990906_n.jpg width=200 height=200><br>");
+      circle_24._popup.options.maxWidth = 300;
+      map.addLayer(circle_24)
+      
+      var circle_25 = L.circle([37.784471161, -122.407777472], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_25.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11850265_477215799123260_777209939_n.jpg width=200 height=200><br>");
+      circle_25._popup.options.maxWidth = 300;
+      map.addLayer(circle_25)
+      
+      var circle_26 = L.circle([37.7979813, -122.4072113], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_26.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xfp1/t51.2885-15/s640x640/sh0.08/e35/1889388_475952912564009_219483370_n.jpg width=200 height=200><br>");
+      circle_26._popup.options.maxWidth = 300;
+      map.addLayer(circle_26)
+      
+      var circle_27 = L.circle([37.808320835, -122.41512971], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_27.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/e15/11351783_501980376622282_941972444_n.jpg width=200 height=200><br>");
+      circle_27._popup.options.maxWidth = 300;
+      map.addLayer(circle_27)
+      
+      var circle_28 = L.circle([37.7698517, -122.4117508], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_28.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11325022_491373364357014_2109520021_n.jpg width=200 height=200><br>");
+      circle_28._popup.options.maxWidth = 300;
+      map.addLayer(circle_28)
+      
+      var circle_29 = L.circle([37.763009307, -122.420884375], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_29.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11850354_1049289978447501_2103720056_n.jpg width=200 height=200><br>");
+      circle_29._popup.options.maxWidth = 300;
+      map.addLayer(circle_29)
+      
+      var circle_30 = L.circle([37.769722222, -122.476944444], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_30.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/s640x640/sh0.08/e35/11848982_695545900589828_1629853117_n.jpg width=200 height=200><br>");
+      circle_30._popup.options.maxWidth = 300;
+      map.addLayer(circle_30)
+      
+      var circle_31 = L.circle([37.808779732, -122.410891758], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_31.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11849245_888483311230777_1611085573_n.jpg width=200 height=200><br>");
+      circle_31._popup.options.maxWidth = 300;
+      map.addLayer(circle_31)
+      
+      var circle_32 = L.circle([37.775, -122.418], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_32.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/l/t51.2885-15/e15/11849919_160358870965388_2118553688_n.jpg width=200 height=200><br>");
+      circle_32._popup.options.maxWidth = 300;
+      map.addLayer(circle_32)
+      
+      var circle_33 = L.circle([37.787028892, -122.407553267], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_33.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11363875_945552868822013_1579044017_n.jpg width=200 height=200><br>");
+      circle_33._popup.options.maxWidth = 300;
+      map.addLayer(circle_33)
+      
+      var circle_34 = L.circle([37.7519913, -122.4187088], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_34.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11934895_984100388276999_464540386_n.jpg width=200 height=200><br>");
+      circle_34._popup.options.maxWidth = 300;
+      map.addLayer(circle_34)
+      
+      var circle_35 = L.circle([37.7868195, -122.40168], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_35.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11934685_653352801468535_1054431077_n.jpg width=200 height=200><br>");
+      circle_35._popup.options.maxWidth = 300;
+      map.addLayer(circle_35)
+      
+      var circle_36 = L.circle([37.775, -122.418], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_36.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/sh0.08/e35/11849349_1658692391011682_1383504488_n.jpg width=200 height=200><br>");
+      circle_36._popup.options.maxWidth = 300;
+      map.addLayer(circle_36)
+      
+      var circle_37 = L.circle([37.787028892, -122.407553267], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_37.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/s640x640/sh0.08/e35/11849849_969096086466894_950123938_n.jpg width=200 height=200><br>");
+      circle_37._popup.options.maxWidth = 300;
+      map.addLayer(circle_37)
+      
+      var circle_38 = L.circle([37.787028892, -122.407553267], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_38.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/e15/11910084_1513660005591665_580634097_n.jpg width=200 height=200><br>");
+      circle_38._popup.options.maxWidth = 300;
+      map.addLayer(circle_38)
+      
+      var circle_39 = L.circle([37.761730219, -122.421614199], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_39.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11850132_941332622594425_1328629918_n.jpg width=200 height=200><br>");
+      circle_39._popup.options.maxWidth = 300;
+      map.addLayer(circle_39)
+      
+      var circle_40 = L.circle([37.808779732, -122.410891758], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_40.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11330811_1180041785345528_440102525_n.jpg width=200 height=200><br>");
+      circle_40._popup.options.maxWidth = 300;
+      map.addLayer(circle_40)
+      
+      var circle_41 = L.circle([37.787028892, -122.407553267], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_41.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/e15/11850251_1625779771024756_233199845_n.jpg width=200 height=200><br>");
+      circle_41._popup.options.maxWidth = 300;
+      map.addLayer(circle_41)
+      
+      var circle_42 = L.circle([37.775, -122.418], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_42.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/sh0.08/e35/11934834_399057886958726_1709300665_n.jpg width=200 height=200><br>");
+      circle_42._popup.options.maxWidth = 300;
+      map.addLayer(circle_42)
+      
+      var circle_43 = L.circle([37.775, -122.418], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_43.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/e15/11352725_935236073213611_856194172_n.jpg width=200 height=200><br>");
+      circle_43._popup.options.maxWidth = 300;
+      map.addLayer(circle_43)
+      
+      var circle_44 = L.circle([37.800288889, -122.410183333], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_44.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11850261_408202302709360_1902484227_n.jpg width=200 height=200><br>");
+      circle_44._popup.options.maxWidth = 300;
+      map.addLayer(circle_44)
+      
+      var circle_45 = L.circle([37.794909161, -122.406568609], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_45.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/s640x640/sh0.08/e35/11925839_1623632537876093_772168856_n.jpg width=200 height=200><br>");
+      circle_45._popup.options.maxWidth = 300;
+      map.addLayer(circle_45)
+      
+      var circle_46 = L.circle([37.764710431, -122.42194426], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_46.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/s640x640/sh0.08/e35/11849351_1662960263944564_755536433_n.jpg width=200 height=200><br>");
+      circle_46._popup.options.maxWidth = 300;
+      map.addLayer(circle_46)
+      
+      var circle_47 = L.circle([37.775, -122.418], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_47.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e35/11373763_418173565044496_415610311_n.jpg width=200 height=200><br>");
+      circle_47._popup.options.maxWidth = 300;
+      map.addLayer(circle_47)
+      
+      var circle_48 = L.circle([37.787028892, -122.407553267], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_48.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xpf1/t51.2885-15/e15/1962949_1470108899961596_1993777183_n.jpg width=200 height=200><br>");
+      circle_48._popup.options.maxWidth = 300;
+      map.addLayer(circle_48)
+      
+      var circle_49 = L.circle([37.787028892, -122.407553267], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_49.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/e15/11910503_1635237840051640_838779132_n.jpg width=200 height=200><br>");
+      circle_49._popup.options.maxWidth = 300;
+      map.addLayer(circle_49)
+      
+      var circle_50 = L.circle([37.7326202, -122.3932495], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_50.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xpf1/t51.2885-15/e15/1170283_488344971326592_937054854_n.jpg width=200 height=200><br>");
+      circle_50._popup.options.maxWidth = 300;
+      map.addLayer(circle_50)
+      
+      var circle_51 = L.circle([37.787028892, -122.407553267], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_51.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/e15/11355059_761809927260741_1153516827_n.jpg width=200 height=200><br>");
+      circle_51._popup.options.maxWidth = 300;
+      map.addLayer(circle_51)
+      
+      var circle_52 = L.circle([37.77919, -122.41914], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_52.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11910393_458756630971517_1652696369_n.jpg width=200 height=200><br>");
+      circle_52._popup.options.maxWidth = 300;
+      map.addLayer(circle_52)
+      
+      var circle_53 = L.circle([37.77919, -122.41914], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_53.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/s640x640/sh0.08/e35/11821283_1039189926121823_2054832876_n.jpg width=200 height=200><br>");
+      circle_53._popup.options.maxWidth = 300;
+      map.addLayer(circle_53)
+      
+      var circle_54 = L.circle([37.775, -122.418], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_54.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/s640x640/sh0.08/e35/11950619_930842020322257_259477761_n.jpg width=200 height=200><br>");
+      circle_54._popup.options.maxWidth = 300;
+      map.addLayer(circle_54)
+      
+      var circle_55 = L.circle([37.775, -122.418], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_55.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/sh0.08/e35/11821896_693361424097721_1681818843_n.jpg width=200 height=200><br>");
+      circle_55._popup.options.maxWidth = 300;
+      map.addLayer(circle_55)
+      
+      var circle_56 = L.circle([37.775, -122.418], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_56.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/sh0.08/e35/11849829_1020147051352525_966703636_n.jpg width=200 height=200><br>");
+      circle_56._popup.options.maxWidth = 300;
+      map.addLayer(circle_56)
+      
+      var circle_57 = L.circle([37.794909161, -122.406568609], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_57.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s640x640/sh0.08/e35/11371213_101260186894182_1621208733_n.jpg width=200 height=200><br>");
+      circle_57._popup.options.maxWidth = 300;
+      map.addLayer(circle_57)
+      
+      var circle_58 = L.circle([37.809106243, -122.4117961], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_58.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11881779_164868757178257_1876068358_n.jpg width=200 height=200><br>");
+      circle_58._popup.options.maxWidth = 300;
+      map.addLayer(circle_58)
+      
+      var circle_59 = L.circle([37.7954025, -122.3938141], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_59.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11420797_1624785074469195_2045668861_n.jpg width=200 height=200><br>");
+      circle_59._popup.options.maxWidth = 300;
+      map.addLayer(circle_59)
+      
+      var circle_60 = L.circle([37.7954025, -122.3938141], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_60.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11257041_1492020131092274_676234784_n.jpg width=200 height=200><br>");
+      circle_60._popup.options.maxWidth = 300;
+      map.addLayer(circle_60)
+      
+      var circle_61 = L.circle([37.80827944, -122.414539678], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_61.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/11950543_522355224589648_368728073_n.jpg width=200 height=200><br>");
+      circle_61._popup.options.maxWidth = 300;
+      map.addLayer(circle_61)
+      
+      var circle_62 = L.circle([37.795116745, -122.392940227], 100, {
+                            color: '#3186cc',
+                            fillColor: '#3186cc',
+                            fillOpacity: 0.6
+                            });
+      circle_62.bindPopup("<img src=https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/e15/11856755_544402189045175_884365787_n.jpg width=200 height=200><br>");
+      circle_62._popup.options.maxWidth = 300;
+      map.addLayer(circle_62)
       
 
       

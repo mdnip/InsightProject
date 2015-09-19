@@ -3,14 +3,76 @@ from app import app
 import pymysql as mdb
 from a_Model import ModelIt
 
+import numpy as np
+import pandas as pd
+import folium
 from geopy.geocoders import Nominatim
+
+from sqlalchemy import *
+import datetime
+import instaconfig
+from pytz import timezone
+
+
+from sklearn.cluster import DBSCAN
+from sklearn import metrics
+
+instagram, database, search_tags = instaconfig.config()
 
 geolocator = Nominatim()
 
+engine = create_engine('mysql://%(user)s:%(pass)s@%(host)s' % database)
+engine.execute('use instagram_master')
+
+q = '''
+    SELECT *
+    FROM posts
+    WHERE searched_tag IN 
+    %s ;
+    ''' % ("('" + "','".join(search_tags[:7]) + "')")  # :7
+
+print q
+
+df = pd.read_sql_query(q,con = engine)
+
 db = mdb.connect(user="root", host="localhost", db="world", charset='utf8')
 
-@app.route('/')
-@app.route('/index')
+##############################################################################
+# Compute DBSCAN
+Xtrain = np.vstack((df.longitude, df.lat)).T
+Xtrain *= np.pi/180
+
+db = DBSCAN(eps=1e-5, min_samples=3).fit(Xtrain)
+core_samples_mask = np.zeros_like(db.labels_, dtype=bool)
+core_samples_mask[db.core_sample_indices_] = True
+labels = db.labels_
+
+# Number of clusters in labels, ignoring noise if present.
+n_clusters_ = len(set(labels)) - (1 if -1 in labels else 0)
+
+# Number of clusters in labels, ignoring noise if present.
+n_clusters_ = len(set(labels)) - (1 if -1 in labels else 0)
+
+print('Estimated number of clusters: %d' % n_clusters_)
+
+colors = [
+    '#d73027',
+    '#f46d43',
+    '#fdae61',
+    '#fee090',
+    '#e0f3f8',
+    '#abd9e9',
+    '#74add1',
+    '#4575b4'
+]
+
+color_labels = [colors[label % 7] for label in labels]
+
+print('Ready')
+
+
+#@app.route('/')
+#@app.route('/index')
 def index():
     return render_template("index.html",
        title = 'Home', user = { 'nickname': 'Miguel' },
@@ -63,16 +125,12 @@ def cities_output():
     the_result = ModelIt(city, pop_input)
     return render_template("output.html", cities = cities, the_result = the_result)
 
+@app.route('/')
+@app.route('/index')
 @app.route('/cover', methods = ['GET'])
 def cover_page():
-    # Displays cover page
-    
-    location = request.args.get('location')
-    distance = request.args.get('distance')
-    
-    geolocation = geolocator.geocode(location)
-    
-    print geolocation.latitude, geolocation.longitude, 
+    # Displays cover page  
+      
     
     return render_template('cover.html', 
                            title = 'busker.ly', 
@@ -85,15 +143,35 @@ def map_page():
     # Display map page
     location = request.args.get('location')
     distance = request.args.get('distance')
+    
+    if location == '':
+        location = 'New Orleans, Louisiana'
+    
     geolocation = geolocator.geocode(location)
     
-    return render_template('map.html',
-                           title = 'busker.ly',
-                           cover_heading = ' busker.ly',
-                           lead = 'Latitude: %s, Longitude: %s' % (geolocation.latitude, geolocation.longitude),
-                           masthead_brand = 'busker.ly')
+    map_osm = folium.Map(location=[geolocation.latitude, geolocation.longitude],
+                    tiles='OpenStreetMap')
 
+    pics = df[['lat','longitude','stand_res_url']].values
 
+    def make_circle(lat,lon,image_url,color_label): 
+        map_osm.circle_marker(
+            location = [lat,lon],
+            radius=100,
+            line_color=color_label,
+            fill_color=color_label,
+            popup = '<img src={url} width=200 height=200><br>'.format(
+                url=image_url)
+        )
+
+    make_circle_vec = np.vectorize(make_circle)
+
+    make_circle_vec(pics[:,0],pics[:,1],pics[:,2],color_labels)
+
+    map_osm.create_map(path='app/templates/osm.html')
+    
+    
+    return render_template('osm.html')
 
 
 

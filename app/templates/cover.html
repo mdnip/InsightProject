@@ -52,30 +52,19 @@
           <div class="inner cover">
             <h1 class="cover-heading">{{cover_heading}}</h1>
             <p class="lead">{{lead}}</p>
-            <p class="lead">
+            <div class="row">
               <div class="col-lg-6">
                   <div class="input-group">
                      <form action="/map" method="GET" id="locdist">
-                         <input type="text" class="form-control" placeholder="New Orleans" id="location" name = "location">
+                         <input type="text" class="form-control" placeholder="New Orleans, Louisiana" id="location" name = "location">
                          <input type="hidden" id = "distance" name = "distance">
                      </form>
-                     <div class="input-group-btn">
-                       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search Distance<span class="caret"></span></button>
-                       <ul class="dropdown-menu dropdown-menu-right">
-                         <li><a onclick="$('#distance').val(10); $('#locdist').submit()" href="#">10 miles</a></li>
-                         <li><a onclick="$('#distance').val(20); $('#locdist').submit()" href="#">20 miles</a></li>
-                         <li><a onclick="$('#distance').val(50); $('#locdist').submit()" href="#">50 miles</a></li>
-                         <li><a onclick="$('#distance').val(100); $('#locdist').submit()" href="#">100 miles</a></li>
-                       </ul>
-                     </div><!-- /btn-group -->
-                     <!--<span class="input-group-btn">
-                       <button class="btn btn-default" type="button">Go!</button>
-                     </span> -->
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" onclick="$('#locdist').submit()">Go!</button>
+                      </span>
                   </div><!-- /input-group -->  
                 </div><!-- /.col-lg-6 -->
-              <!-- <a href="#" class="btn btn-lg btn-default">Search</a>
-                -->
-            </p>
+              </div>
           </div>
 
           <div class="mastfoot">

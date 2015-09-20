@@ -4,3 +4,4 @@ instaconfig.py
 Instaconfig.py
 *.log
 *.sql
+*.py~

@@ -144,7 +144,7 @@ def map_page():
     location = request.args.get('location')
     distance = request.args.get('distance')
     
-    if location == '':
+    '''if location == '':
         location = 'New Orleans, Louisiana'
     
     geolocation = geolocator.geocode(location)
@@ -168,10 +168,10 @@ def map_page():
 
     make_circle_vec(pics[:,0],pics[:,1],pics[:,2],color_labels)
 
-    map_osm.create_map(path='app/templates/osm.html')
+    map_osm.create_map(path='app/templates/osm.html')'''
     
     
-    return render_template('osm.html')
+    return render_template('gsm.html')
 
 
 

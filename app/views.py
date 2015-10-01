@@ -17,14 +17,9 @@ from pull_from_database import *
 from sklearn.cluster import DBSCAN
 from sklearn import metrics
 
-#instagram, database, search_tags = instaconfig.config()
-
 geolocator = Nominatim()
 
-#engine = create_engine('mysql://%(user)s:%(pass)s@%(host)s' % database)
-#engine.execute('use instagram')
-
-#con = mdb.connect(database['host'], database['user'], database['pass'], 'instagram') #host, user, password, #database
+from backend import *
 
 
 

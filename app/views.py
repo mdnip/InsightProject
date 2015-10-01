@@ -12,33 +12,21 @@ from sqlalchemy import *
 import datetime
 import instaconfig
 from pytz import timezone
-
+from pull_from_database import *
 
 from sklearn.cluster import DBSCAN
 from sklearn import metrics
 
-instagram, database, search_tags = instaconfig.config()
+#instagram, database, search_tags = instaconfig.config()
 
 geolocator = Nominatim()
 
 #engine = create_engine('mysql://%(user)s:%(pass)s@%(host)s' % database)
 #engine.execute('use instagram')
 
-con = mdb.connect(database['host'], database['user'], database['pass'], 'instagram') #host, user, password, #database
+#con = mdb.connect(database['host'], database['user'], database['pass'], 'instagram') #host, user, password, #database
 
 
-q = '''
-    SELECT *
-    FROM posts
-    WHERE searched_tag IN 
-    %s ;
-    ''' % ("('" + "','".join(search_tags[:7]) + "')")  # :7
-
-print q
-
-df = pd.read_sql(q,con = con)
-
-#db = mdb.connect(user="root", host="localhost", db="world", charset='utf8')
 
 ##############################################################################
 # Compute DBSCAN

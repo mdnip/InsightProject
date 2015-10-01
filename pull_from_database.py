@@ -3,11 +3,14 @@ import pandas as pd
 import requests
 from sqlalchemy import *
 import instaconfig
+import pymysql as mdb
 
 instagram, database, search_tags = instaconfig.config()
 
-engine = create_engine('mysql://%(user)s:%(pass)s@%(host)s' % database)
-result = engine.execute('use instagram')
+#engine = create_engine('mysql://%(user)s:%(pass)s@%(host)s' % database)
+#result = engine.execute('use instagram')
+
+con = mdb.connect(database['host'], database['user'], database['pass'], 'instagram') #host, user, password, #database
 
 q = '''
     SELECT *
@@ -18,7 +21,7 @@ q = '''
 
 # Read database into pandas dataframe
 
-df = pd.read_sql_query(q,con = engine)
+df = pd.read_sql(q,con = con)
 
-result.close()
-engine.dispose()
+#result.close()
+#engine.dispose()

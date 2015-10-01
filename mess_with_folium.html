@@ -50,10 +50,11 @@
 
 <body>
 
-   <div class="folium-map" id="folium_9dabf598571541a68c6e1d97d36e3050" style="width: 100%; height: 100%"></div>
+   <div class="folium-map" id="folium_c9cc4337385e4c00b0769a5f5b69fbb4" style="width: 100%; height: 100%"></div>
 
    <script>
-
+      var global_lat = 0
+      var global_lon = 0
       
 
       var base_tile = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -94,8 +95,8 @@
       /*
       Creates the map and adds the selected layers
       */
-      var map = L.map('folium_9dabf598571541a68c6e1d97d36e3050', {
-                                       center:[45.5236, -122.675],
+      var map = L.map('folium_c9cc4337385e4c00b0769a5f5b69fbb4', {
+                                       center:[global_lat, global_lon],
                                        zoom: 10,
                                        maxBounds: bounds,
                                        layers: [base_tile]

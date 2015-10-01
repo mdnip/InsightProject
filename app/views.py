@@ -19,7 +19,7 @@ from sklearn import metrics
 
 geolocator = Nominatim()
 
-from backend import *
+#from backend import *
 
 
 
@@ -76,12 +76,12 @@ def map_page():
     location = request.args.get('location')
     distance = request.args.get('distance')
     
-    '''if location == '':
+    if location == '':
         location = 'New Orleans, Louisiana'
     
     geolocation = geolocator.geocode(location)
     
-    map_osm = folium.Map(location=[geolocation.latitude, geolocation.longitude],
+    '''map_osm = folium.Map(location=[geolocation.latitude, geolocation.longitude],
                     tiles='OpenStreetMap')
 
     pics = df[['lat','longitude','stand_res_url']].values
@@ -103,7 +103,7 @@ def map_page():
     map_osm.create_map(path='app/templates/osm.html')'''
     
     
-    return render_template('gsm.html')
+    return render_template('gsm.html',gsm_lat = geolocation.latitude,gsm_lon = geolocation.longitude)
 
 
 

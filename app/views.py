@@ -88,7 +88,9 @@ def cover_page():
 def map_page():
     # Display map page
     location = request.args.get('location')
-    distance = request.args.get('distance')
+    #distance = request.args.get('distance')
+    
+    print location
     
     if location == '':
         location = 'New Orleans, Louisiana'
@@ -117,6 +119,8 @@ def map_page():
     map_osm.create_map(path='app/templates/osm.html')'''
     
     
+    
+    
     return render_template('map.html',
                            gsm_lat = geolocation.latitude,
                            gsm_lon = geolocation.longitude,
@@ -125,8 +129,33 @@ def map_page():
                            toolbar_link_3 = toolbar_vars['link3'],
                            toolbar_label_1 = toolbar_vars['label1'],
                            toolbar_label_2 = toolbar_vars['label2'],
-                           toolbar_label_3 = toolbar_vars['label3']
+                           toolbar_label_3 = toolbar_vars['label3'],
+                           render_map = 'gsm.html'
                           )
+
+@app.route('/folium', methods = ['GET'])
+def folium_map():
+    location = request.args.get('location')
+    distance = request.args.get('distance')
+    
+    print location
+    
+    if location == None:
+        location = 'New Orleans, Louisiana'
+    try:
+        geolocation = geolocator.geocode(location)
+    except:
+        class geoc:
+            latitude = 0
+            longitude = 0
+        
+        geolocation = geoc()
+    
+    
+        
+    return render_template('gsm.html',
+                          gsm_lat = geolocation.latitude,
+                          gsm_lon = geolocation.longitude)
 
 
 

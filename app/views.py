@@ -22,7 +22,7 @@ geolocator = Nominatim()
 #from backend import *
 
 
-
+'''
 ##############################################################################
 # Compute DBSCAN
 Xtrain = np.vstack((df.longitude, df.lat)).T
@@ -54,6 +54,14 @@ colors = [
 
 color_labels = [colors[label % 7] for label in labels]
 
+'''
+toolbar_vars = {'label1' : 'Home',
+                'label2' : 'Details',
+                'label3' : 'Contact',
+                'link1' : '/index',
+                'link2' : 'https://docs.google.com/presentation/d/1Q0dR91rene4724SfFQO7aMZDhTGU8inJMhAYVkoHU9c/pub?start=false&loop=false&delayms=3000',
+                'link3' : 'https://mdnip.wordpress.com/not-work/'}
+
 print('Ready')
 
 
@@ -64,11 +72,17 @@ def cover_page():
     # Displays cover page  
       
     
-    return render_template('cover.html', 
+    return render_template('index.html', 
                            title = 'buskerbot.xyz', 
                            cover_heading = 'buskerbot.xyz', 
                            lead = 'Find streetmusicians near you', 
-                           masthead_brand = 'buskerbot.xyz')
+                           masthead_brand = 'buskerbot.xyz',
+                           toolbar_link_1 = toolbar_vars['link1'],
+                           toolbar_link_2 = toolbar_vars['link2'],
+                           toolbar_link_3 = toolbar_vars['link3'],
+                           toolbar_label_1 = toolbar_vars['label1'],
+                           toolbar_label_2 = toolbar_vars['label2'],
+                           toolbar_label_3 = toolbar_vars['label3'],)
 
 @app.route('/map', methods = ['GET'])
 def map_page():
@@ -103,7 +117,16 @@ def map_page():
     map_osm.create_map(path='app/templates/osm.html')'''
     
     
-    return render_template('gsm.html',gsm_lat = geolocation.latitude,gsm_lon = geolocation.longitude)
+    return render_template('map.html',
+                           gsm_lat = geolocation.latitude,
+                           gsm_lon = geolocation.longitude,
+                           toolbar_link_1 = toolbar_vars['link1'],
+                           toolbar_link_2 = toolbar_vars['link2'],
+                           toolbar_link_3 = toolbar_vars['link3'],
+                           toolbar_label_1 = toolbar_vars['label1'],
+                           toolbar_label_2 = toolbar_vars['label2'],
+                           toolbar_label_3 = toolbar_vars['label3']
+                          )
 
 
 

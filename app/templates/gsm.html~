@@ -95,7 +95,7 @@
       Creates the map and adds the selected layers
       */
       var map = L.map('folium_698d32b5c786429f82663617f6e3bfbf', {
-                                       center:[{{gsm_lat}}, {{gsm_lon}}],
+                                       center:[0,0],
                                        zoom: 10,
                                        maxBounds: bounds,
                                        layers: [base_tile]

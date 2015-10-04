@@ -41,9 +41,9 @@
               <h3 class="masthead-brand">{{masthead_brand}}</h3>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li class="active"><a href="{{toolbar_link_1}}">{{toolbar_label_1}}</a></li>
-                  <li><a href="{{toolbar_link_2}}">{{toolbar_label_2}}</a></li>
-                  <li><a href="{{toolbar_link_3}}">{{toolbar_label_3}}</a></li>
+                  <li class="active"><a href="{{toolbar_link_1}}">Home</a></li>
+                  <li><a href="{{toolbar_link_2}}">Details</a></li>
+                  <li><a href="{{toolbar_link_3}}">Contact</a></li>
                 </ul>
               </nav>
             </div>

@@ -121,7 +121,7 @@ def map_page():
     
     
     
-    return render_template('gsm.html',
+    return render_template('map.html',
                            gsm_lat = geolocation.latitude,
                            gsm_lon = geolocation.longitude,
                            toolbar_link_1 = toolbar_vars['link1'],
@@ -153,7 +153,7 @@ def folium_map():
     
     
         
-    return render_template('gsm.html',
+    return render_template('map.html',
                           gsm_lat = geolocation.latitude,
                           gsm_lon = geolocation.longitude)
 

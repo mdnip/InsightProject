@@ -23,9 +23,6 @@ a:hover {
 /*
  * Base structure
  */
-#map{
-  width: 100%;
-}
 
 html,
 body {

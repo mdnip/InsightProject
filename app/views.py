@@ -75,7 +75,7 @@ def cover_page():
     return render_template('index.html', 
                            title = 'buskerbot.xyz', 
                            cover_heading = 'buskerbot.xyz', 
-                           lead = 'Find streetmusicians near you', 
+                           lead = 'Find street musicians near you', 
                            masthead_brand = 'buskerbot.xyz',
                            toolbar_link_1 = toolbar_vars['link1'],
                            toolbar_link_2 = toolbar_vars['link2'],
@@ -121,7 +121,7 @@ def map_page():
     
     
     
-    return render_template('map.html',
+    return render_template('gsm.html',
                            gsm_lat = geolocation.latitude,
                            gsm_lon = geolocation.longitude,
                            toolbar_link_1 = toolbar_vars['link1'],
